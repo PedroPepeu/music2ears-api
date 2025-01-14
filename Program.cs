@@ -1,13 +1,24 @@
-var builder = WebApplication.CreateBuilder(args);
+using MySql.Data.MySqlClient;
+using System;
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+class Program {
+    static void Main(string[] args) {
+        var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+        string connectionString = "Server=localhost;Database=music2ear;User=api;Password=password123;";
+        builder.Services.AddSingleton(new MySqlConnection(connectionString));
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
-app.Run();
+        var app = builder.Build();
+
+        app.UseHttpsRedirection();
+        app.UseAuthorization();
+        app.MapControllers();
+
+        app.Run();
+    }
+}
+

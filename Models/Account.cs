@@ -9,7 +9,6 @@ public class Account {
     [Required]
     public string firstName { get; set; }
     
-    [Required]
     public string lastName  { get; set; }
 
     [Required]
@@ -18,10 +17,10 @@ public class Account {
 
     [Required]
     [StringLength(30, MinimumLength = 8)]
-    public string psswd { get; set; }
+    public string password { get; set; }
 
     public bool newsUpd  { get; set; }
     public bool productUpd  { get; set; }
 
-    public IFormFile ProfilePicture { get; set; }
+    public IFormFile profilePicture { get; set; }
 }

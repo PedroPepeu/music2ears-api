@@ -10,8 +10,8 @@ public class AccountController : ControllerBase {
         }
 
         // Process the image file
-        if (account.ProfilePicture != null) {
-            var imageFileName = Path.GetFileName(account.ProfilePicture.FileName);
+        if (account.profilePicture != null) {
+            var imageFileName = Path.GetFileName(account.profilePicture.FileName);
             var imageFilePath = Path.Combine("wwwroot/uploads/images", imageFileName);
 
             if (!Directory.Exists("wwwroot/uploads/images")) {
@@ -19,7 +19,7 @@ public class AccountController : ControllerBase {
             }
 
             using (var stream = new FileStream(imageFilePath, FileMode.Create)) {
-                account.ProfilePicture.CopyTo(stream);
+                account.profilePicture.CopyTo(stream);
             }
         }
 

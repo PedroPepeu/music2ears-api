@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("music2ears-back")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a52c891f4557e2a5371c993df409cc048c29677")]
 [assembly: System.Reflection.AssemblyProductAttribute("music2ears-back")]
 [assembly: System.Reflection.AssemblyTitleAttribute("music2ears-back")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
