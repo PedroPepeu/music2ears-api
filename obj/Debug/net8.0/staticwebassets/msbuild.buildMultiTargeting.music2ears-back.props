@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/music2ears-back.props" />
+</Project>
